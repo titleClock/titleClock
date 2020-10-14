@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title id='title'></title>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script>
+        function doClock() {
+            var date = new Date();
+            var hour = date.getHours();
+            var min = date.getMinutes();
+            var sec = date.getSeconds();
+            var mil = date.getMilliseconds();
+
+            document.getElementById("title").innerHTML = hour + ':' + min + ':' + sec + ':' + mil;
+
+            setTimeout(function(){ doClock(); }, 1);
+        }
+    </script>
+</head>
+<body onload='doClock()''>
+
+</body>
+</html>
